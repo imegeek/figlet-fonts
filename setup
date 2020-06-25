@@ -27,6 +27,7 @@ mv * $PREFIX/share/figlet
 cd $HOME
 rm setup
 rm -rf $PREFIX/share/FONTS-F
+sleep 1
 echo
 echo -e "\e[1m[√] Setup Completed."
 sleep 1
