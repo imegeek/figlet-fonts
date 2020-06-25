@@ -38,8 +38,8 @@ if [ ! -f "$PREFIX/bin/show-figlet" ]; then
 echo "cd $PREFIX/share/figlet && ls" > show-figlet
 chmod +x show-figlet
 mv show-figlet $PREFIX/bin
-cd -
 fi
+$HOME
 if [ -f "$PREFIX/bin/show-figlet" ]; then
 echo
 sleep 1
