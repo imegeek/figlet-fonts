@@ -2,9 +2,22 @@
 
 ## Author : ABHacker Official
 
+command -v figlet > /dev/null 2>&1 || { echo -e >&2 "\033[1;91mI require figlet but it's not installed, Now Installing.\e[0m"; pkg install figlet -y; clear; connection="$(ping -c 1 -q www.google.com >&/dev/null; echo $?)"
+if [[ "$connection" != 0 ]]
+then clear
+echo -e "\033[1;91m                             [\033[1;92m-\033[1;91m] No Internet\033[1;92m connection!"
+   exit
+fi; }
+
+connection="$(ping -c 1 -q www.google.com >&/dev/null; echo $?)"
+if [[ "$connection" != 0 ]]
+then clear
+echo -e "\033[1;91m                             [\033[1;92m-\033[1;91m] No Internet\033[1;92m connection!"
+   exit
+fi
 echo -e "\e[1m[⬇] Installing FONTS-F..."
-cd $PRRFIX/share
-git clone https://github.com/abhackerofficial/FONT-F &> /dev/null
+cd $PREFIX/share
+git clone https://github.com/abhackerofficial/FONT-F > /dev/null > 2>&1
 sleep 1
 echo
 echo -e "\e[1m[!] Moving Fonts to Directory : usr/share/figlet
