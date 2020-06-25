@@ -1,3 +1,7 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+## Author : ABHacker Official
+
 echo -e "\e[1m[⬇] Installing FONTS-F..."
 cd $PRRFIX/share
 git clone https://github.com/abhackerofficial/FONT-F &> /dev/null
