@@ -37,10 +37,12 @@ sleep 1
 echo
 
 #configure
-if [ ! -f "$PREFIX/bin/show figlet" ]; then
-echo "cd $PREFIX/share/figlet && ls" > show figlet
+if [ ! -f "$PREFIX/bin/show-figlet" ]; then
+echo "cd $PREFIX/share/figlet && ls" > show-figlet
+mv show-figlet $PREFIX/bin
+cd -
 fi
-if [ -f "$PREFIX/bin/show figlet" ]; then
+if [ -f "$PREFIX/bin/show-figlet" ]; then
 fi
 
 echo
