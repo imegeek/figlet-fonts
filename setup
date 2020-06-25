@@ -18,7 +18,6 @@ echo -e "\033[1;91m                             [\033[1;92m-\033[1;91m] No Inter
    exit
 fi; }
 
-rm setup
 #checking connection
 connection="$(ping -c 1 -q www.google.com >&/dev/null; echo $?)"
 if [[ "$connection" != 0 ]]
@@ -27,6 +26,7 @@ echo -e "\033[1;91m                             [\033[1;92m-\033[1;91m] No Inter
    exit
 fi
 
+rm setup
 #main progress
 echo
 tput civis
