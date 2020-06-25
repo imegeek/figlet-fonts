@@ -45,6 +45,7 @@ fi
 if [ -f "$PREFIX/bin/show-figlet" ]; then
 fi
 
+#continue
 echo
 sleep 1
 echo -e "\e[1m[!] Moving Fonts to Directory : usr/share/figlet"
