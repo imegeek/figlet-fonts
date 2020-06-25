@@ -12,6 +12,7 @@ cd FONT-F
 rm setup && LICENSE
 mv * $PREFIX/share/figlet
 cd $HOME
+rm setup
 rm -rf $PREFIX/share/FONT-F
 echo -e "\e[1m[√] Setup Completed."
 sleep 1
