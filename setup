@@ -2,6 +2,13 @@
 
 ## Author : ABHacker Official
 
+command -v tput > /dev/null 2>&1 || { apt install ncurses-utils &> /dev/null ; clear ; connection="$(ping -c 1 -q www.google.com >&/dev/null; echo $?)"
+if [[ "$connection" != 0 ]]
+then clear
+echo -e "\033[1;91m[\033[1;92m-\033[1;91m] No Internet\033[1;92m connection!"
+   exit
+fi; }
+
 command -v figlet > /dev/null 2>&1 || { echo -e >&2 "\033[1;91mI require figlet but it's not installed, Now Installing.\e[0m"; pkg install figlet -y; clear; connection="$(ping -c 1 -q www.google.com >&/dev/null; echo $?)"
 if [[ "$connection" != 0 ]]
 then clear
@@ -15,6 +22,7 @@ then clear
 echo -e "\033[1;91m                             [\033[1;92m-\033[1;91m] No Internet\033[1;92m connection!"
    exit
 fi
+tput civis
 echo -e "\e[1m[⬇] Installing FONTS-F..."
 cd $PREFIX/share
 git clone https://github.com/abhackerofficial/FONTS-F > /dev/null 2>&1
@@ -35,4 +43,5 @@ echo
 echo -e "\e[1m[?] You can execute Fonts Using :-  figlet -f font-name 'test!' \e[0m"
 echo
 termux-reload-settings
+tput cnorm
 #done (:
