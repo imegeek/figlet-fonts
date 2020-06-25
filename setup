@@ -17,16 +17,16 @@ echo -e "\033[1;91m                             [\033[1;92m-\033[1;91m] No Inter
 fi
 echo -e "\e[1m[⬇] Installing FONTS-F..."
 cd $PREFIX/share
-git clone https://github.com/abhackerofficial/FONT-F > /dev/null > 2>&1
+git clone https://github.com/abhackerofficial/FONTS-F > /dev/null 2>&1
 sleep 1
 echo
 echo -e "\e[1m[!] Moving Fonts to Directory : usr/share/figlet
-cd FONT-F
+cd FONTS-F
 rm setup && LICENSE
 mv * $PREFIX/share/figlet
 cd $HOME
 rm setup
-rm -rf $PREFIX/share/FONT-F
+rm -rf $PREFIX/share/FONTS-F
 echo -e "\e[1m[√] Setup Completed."
 sleep 1
 echo
