@@ -1,8 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
 ## Author : ABHacker Official
-
-##copyrights free [2020]
+#copyrights free [2020]
 
 #checking packages
 command -v tput > /dev/null 2>&1 || { apt install ncurses-utils &> /dev/null ; clear ; connection="$(ping -c 1 -q www.google.com >&/dev/null; echo $?)"
