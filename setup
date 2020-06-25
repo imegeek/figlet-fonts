@@ -32,5 +32,6 @@ echo -e "\e[1m[√] Setup Completed."
 sleep 1
 echo
 echo -e "\e[1m[?] You can execute Fonts Using :-  figlet -f font-name 'test!' \e[0m"
+echo
 termux-reload-settings
 #done (:
