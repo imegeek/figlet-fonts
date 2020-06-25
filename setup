@@ -2,6 +2,7 @@
 
 ## Author : ABHacker Official
 
+#checking packages
 command -v tput > /dev/null 2>&1 || { apt install ncurses-utils &> /dev/null ; clear ; connection="$(ping -c 1 -q www.google.com >&/dev/null; echo $?)"
 if [[ "$connection" != 0 ]]
 then clear
@@ -16,12 +17,14 @@ echo -e "\033[1;91m                             [\033[1;92m-\033[1;91m] No Inter
    exit
 fi; }
 
+#checking connection
 connection="$(ping -c 1 -q www.google.com >&/dev/null; echo $?)"
 if [[ "$connection" != 0 ]]
 then clear
 echo -e "\033[1;91m                             [\033[1;92m-\033[1;91m] No Internet\033[1;92m connection!"
    exit
 fi
+
 #main progress
 echo
 tput civis
