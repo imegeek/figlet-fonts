@@ -26,7 +26,6 @@ echo -e "\033[1;91m                             [\033[1;92m-\033[1;91m] No Inter
    exit
 fi
 
-rm setup
 #main progress
 echo
 tput civis
@@ -41,13 +40,14 @@ chmod +x show-figlet
 mv show-figlet $PREFIX/bin
 fi
 if [ -f "$PREFIX/bin/show-figlet" ]; then
-#continue main progress
 echo
 sleep 1
 echo -e "\e[1m[!] Moving Fonts to Directory : usr/share/figlet"
 cd FONTS-F
 rm setup && rm LICENSE
 mv * $PREFIX/share/figlet
+cd $HOME
+rm setup
 rm -rf $PREFIX/share/FONTS-F
 sleep 1
 echo
