@@ -27,10 +27,10 @@ mv * $PREFIX/share/figlet
 cd $HOME
 rm setup
 rm -rf $PREFIX/share/FONTS-F
+echo
 echo -e "\e[1m[√] Setup Completed."
 sleep 1
 echo
 echo -e "\e[1m[?] You can execute Fonts Using :-  figlet -f font-name 'test!' \e[0m"
 termux-reload-settings
-echo""
 #done (:
