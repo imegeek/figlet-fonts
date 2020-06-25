@@ -26,7 +26,8 @@ echo -e "\033[1;91m                             [\033[1;92m-\033[1;91m] No Inter
    exit
 fi
 
-#main progress
+rm setup
+#installing
 echo
 tput civis
 echo -e "\e[1m[⬇] Installing FONTS-F..."
@@ -46,8 +47,6 @@ echo -e "\e[1m[!] Moving Fonts to Directory : usr/share/figlet"
 cd FONTS-F
 rm setup && rm LICENSE
 mv * $PREFIX/share/figlet
-cd $HOME
-rm setup
 rm -rf $PREFIX/share/FONTS-F
 sleep 1
 echo
