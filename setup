@@ -22,7 +22,7 @@ sleep 1
 echo
 echo -e "\e[1m[!] Moving Fonts to Directory : usr/share/figlet"
 cd FONTS-F
-rm setup && LICENSE
+rm setup && rm LICENSE
 mv * $PREFIX/share/figlet
 cd $HOME
 rm setup
