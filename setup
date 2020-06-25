@@ -22,6 +22,8 @@ then clear
 echo -e "\033[1;91m                             [\033[1;92m-\033[1;91m] No Internet\033[1;92m connection!"
    exit
 fi
+#main progress
+echo
 tput civis
 echo -e "\e[1m[⬇] Installing FONTS-F..."
 cd $PREFIX/share
